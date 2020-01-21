@@ -838,6 +838,9 @@ class SnmpUSMSecurityModel(AbstractSecurityModel):
                 else:
                     raise error.ProtocolError('Peer SNMP engine info missing')
 
+            snmpEngineBoots = 0
+            snmpEngineTime = 0
+
             # 3.2.7a
             if msgAuthoritativeEngineId == snmpEngineID:
                 if (snmpEngineBoots == 2147483647 or
